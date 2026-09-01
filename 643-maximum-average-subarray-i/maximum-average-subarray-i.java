@@ -12,6 +12,6 @@ class Solution {
             l++;
          }
          }
-         return ans*1.0 /k;
+         return (double)ans/k;
     }
 }
