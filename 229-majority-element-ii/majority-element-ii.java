@@ -11,13 +11,12 @@ class Solution {
                 map.put(nums[i],1);
              }
         }
-        for(int i=0; i<n; i++){
-        if(map.get(nums[i]) > n/3 ){
-            if(!list.contains(nums[i])){
-            list.add(nums[i]);
-            }
-        }
+        for (int key : map.keySet()) {
+            if (map.get(key) > n / 3) {
+            list.add(key);
+       }
     }
+        
         return list;
     }
 }
