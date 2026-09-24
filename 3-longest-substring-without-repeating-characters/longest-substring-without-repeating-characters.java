@@ -4,18 +4,15 @@ class Solution {
         HashSet<Character> set =  new HashSet<>(); 
         int max=0;
 
-        for(int r=0; r<s.length(); r++){
-            char ch_r = s.charAt(r);
-
-
-
-            while(set.contains(ch_r)){
-                char ch_l = s.charAt(l);
-                set.remove(ch_l);
+        for(int i = 0; i<s.length(); i++){
+            char chr = s.charAt(i);
+            while(set.contains(chr)){
+                char chl = s.charAt(l);
+                set.remove(chl);
                 l++;
             }
-            set.add(ch_r);
-            max= Math.max(max, r-l+1);
+            set.add(chr);
+            max = Math.max(max, i-l+1);
         }
         return max;
     }
